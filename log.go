@@ -45,7 +45,7 @@ type logger struct {
 
 func (l logger) log(s logging.Severity, e logging.Entry) {
 	e.Severity = s
-	go l.golog.Log(e)
+	l.golog.Log(e)
 }
 
 func (l logger) Log(e logging.Entry) {
